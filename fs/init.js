@@ -17,7 +17,7 @@ let pin = 16;
 let dht = DHT.create(pin, DHT.DHT22);
 
 // This function reads data from the DHT sensor every 2 second
-Timer.set(2000 /* milliseconds */, true /* repeat */, function() {
+Timer.set(2000 /* milliseconds */, Timer.REPEAT, function() {
   let t = dht.getTemp();
   let h = dht.getHumidity();
 
